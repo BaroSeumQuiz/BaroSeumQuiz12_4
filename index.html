@@ -19,10 +19,10 @@
    <font size=5px; font-family:돋움; weight:bold> 틀린문제 목록 </font><br></br>
    <font size=4.5px; font-family:돋움;>
    <div id="wrongq11" style="display:none;">
-     Q1. 규칙에 따라 트라이앵 북을 연주할 때, 빈칸에 연주되는 악기를 써넣으세요. <a href="javascript:wrongquizshow(11);" style="font-weight:bold;">다시풀기</a><br></br>
+     Q1. 규칙에 따라 트라이앵 북을 연주할 때, 빈칸에 연주되는 악기를 고르세요. <a href="javascript:wrongquizshow(11);" style="font-weight:bold;">다시풀기</a><br></br>
    </div>
    <div id="wrongq12" style="display:none;">
-     Q2. 규칙에 따라 쌓기나무를 쌓을 때, 이어질모양에 쌓기나무가 몇 개 필요한지 써넣으세요.  <a href="javascript:wrongquizshow(12);" style="font-weight:bold;">다시풀기</a><br></br>
+     Q2. 규칙에 따라 쌓기나무를 쌓을 때, 이어질모양에 쌓기나무가 몇 개 필요한지 고르세요.  <a href="javascript:wrongquizshow(12);" style="font-weight:bold;">다시풀기</a><br></br>
    </div>
    <div id="wrongq13" style="display:none;">
      Q3. 규칙에 따라 수를 써넣을 때, 빈칸에 들어갈 알맞은 수를 구해보세요. <a href="javascript:wrongquizshow(13);" style="font-weight:bold;">다시풀기</a><br></br>
@@ -57,11 +57,12 @@
 <div id = "quizstart" style="height: auto; width:615px; border-bottom:2px double orange;">
   <img style="margin-left:20px" src="/BaroSeumQuiz12_4/images/quiz01.png" />
 <p style="margin-left:20px; font-size:20pt; font-family:굴림; font-weight:bold" >
-  Q1. <br> 규칙에 따라 트라이앵글과 북을 연주할 때,<br>빈칸에 연주되는 악기를 써넣으세요.
+  Q1. <br> 규칙에 따라 트라이앵글과 북을 연주할 때,<br>빈칸에 연주되는 악기를 고르세요.
 </p>
 <form name="form11" style="margin-left:20px">
-  <font size=4px; >
- <input type="text" name="quiz11" value=""><br>
+  <font size=5px; >
+  <label><input type="radio" name="quiz11" value="v1"> 트라이앵글</label></br>
+  <label><input type="radio" name="quiz11" value="v2"> 북</label><br>
  </font>
  <div id="checktrue11" style="margin:0px 0 0 0px; display:none;" >
    <img src="/BaroSeumQuiz12_4/images/checktrue.png"/>
@@ -86,11 +87,13 @@
 <div id = "quizstart" style="height: auto; width:615px; border-bottom:2px double orange;">
   <img style="margin-left:20px" src="/BaroSeumQuiz12_4/images/quiz02.png" />
 <p style="margin-left:20px; font-size:20pt; font-family:굴림; font-weight:bold" >
-  Q2.<br> 규칙에 따라 쌓기나무를 쌓을 때, <br> 이어질모양에 쌓기나무가 몇 개 필요한지 써넣으세요.
+  Q2.<br> 규칙에 따라 쌓기나무를 쌓을 때, <br> 이어질모양에 쌓기나무가 몇 개 필요한지 고르세요.
 </p>
 <form name="form12" style="margin-left:20px">
-  <font size=6px; >
- <input type="text" name="quiz12" value=""><br>
+  <font size=5px; >
+  <label><input type="radio" name="quiz12" value="v1"> 9개</label></br>
+  <label><input type="radio" name="quiz12" value="v2"> 10개</label><br>
+   <label><input type="radio" name="quiz12" value="v3"> 11개</label><br>
  </font>
   <div id="checktrue12" style="margin:0px 0 0 0px; display:none;" >
    <img src="/BaroSeumQuiz12_4/images/checktrue.png"/>
@@ -180,7 +183,8 @@
 </p>
 <form name="form15" style="margin-left:20px">
   <font size=6px; >
- <input type="text" name="quiz15" value=""><br>
+  <label><input type="radio" name="quiz15" value="v1"> 하트</label></br>
+  <label><input type="radio" name="quiz15" value="v2"> 별</label><br>
  </font>
  <div id="checktrue15" style="margin:0px 0 0 0px; display:none;" >
    <img src="/BaroSeumQuiz12_4/images/checktrue.png"/>
@@ -366,7 +370,7 @@
   function myFucntion11() {
 
    checkresult_set(11)
-   if(form11.quiz11.value=="북"){
+   if(form11.quiz11[1].checked==true){
 
   checkresult_true(11);
    }else{
@@ -377,7 +381,7 @@
 
   function myFucntion12() {
   checkresult_set(12)
-   if(form12.quiz12.value=="10"){
+   if(form12.quiz12[1].checked==true){
 
   checkresult_true(12);
    }else{
@@ -410,7 +414,7 @@
 
   function myFucntion15() {
    checkresult_set(15)
-   if(form15.quiz15.value=="별"){
+   if(form15.quiz15[1].checked==true){
 
   checkresult_true(15);
    }else{
